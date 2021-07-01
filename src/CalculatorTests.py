@@ -22,6 +22,11 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.subtract(2, 2), 0)
         self.assertEqual(calculator.result, 0)
 
+    def test_division_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.division(2,2), 1)
+        self.assertEqual(calculator.result, 1)
+
 
 if __name__ == '__main__':
     unittest.main()
