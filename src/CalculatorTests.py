@@ -27,20 +27,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.division(2,2), 1)
         self.assertEqual(calculator.result, 1)
 
-    def test_multiply_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.multiply(2,2), 4)
-        self.assertEqual(calculator.result, 4)
-
-    def test_square_root_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.square_root(25), 5)
-        self.assertEqual(calculator.result, 5)
-
-    def test_square_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.square(5), 25)
-        self.assertEqual(calculator.result, 25)
-
 if __name__ == '__main__':
     unittest.main()
