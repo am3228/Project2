@@ -1,35 +1,9 @@
 from Calculator.Subtraction import subtraction
 from Calculator.Addition import addition
-from Calculator.Multiplication import multiplication
+from Calculator.Multiply import multiply
 from Calculator.Division import division
-from Calculator.Square import squaring
-from Calculator.SquareRoot import squarerooting
-
-def addition(a, b):
-    return int(a) + int(b)
-
-def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    c = b - a
-    return c
-
-def division(a, b):
-    c = (b/a)
-    c = round(float(c), 9)
-    return c
-
-def multiply(a, b):
-    return int(a) * int(b)
-
-def square_root(a):
-    c = a ** .5
-    c = round(float(c), 8)
-    return c
-
-def square(a):
-    c = a*a
-    return c
+from Calculator.Square import square
+from Calculator.Squareroot import squareroot
 
 class Calculator:
     result = 0
@@ -53,8 +27,8 @@ class Calculator:
         self.result = multiply(a, b)
         return self.result
 
-    def square_root(self, a):
-        self.result = square_root(a)
+    def squareroot(self, a):
+        self.result = squareroot(a)
         return self.result
 
     def square(self, a):
