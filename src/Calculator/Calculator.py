@@ -1,4 +1,9 @@
-from CsvReader import CsvReader
+from Calculator.Subtraction import subtraction
+from Calculator.Addition import addition
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
+from Calculator.Square import squaring
+from Calculator.SquareRoot import squarerooting
 
 def addition(a, b):
     return int(a) + int(b)
