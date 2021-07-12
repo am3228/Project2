@@ -1,5 +1,11 @@
 from Calculator.Calculator import Calculator
 from Statistics.Mean import mean
+from Statistics.Median import median
+from Statistics.Mode import mode
+from Statistics.Standard_deviation import standard_deviation
+from Statistics.Variance import variance
+from Statistics.ZScore import zscore
+from Statistics.SampleMean import samplemean
 from CsvReader.CsvReader import CsvReader
 
 class Statistics(Calculator):
@@ -13,3 +19,7 @@ class Statistics(Calculator):
         a = len(self)
         b = float(sum(self))
         return b / a
+
+    def median(self, data):
+        self.result = median(data)
+        return self.result
