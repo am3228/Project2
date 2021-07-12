@@ -16,4 +16,3 @@ def median(data):
         return result
     except ValueError:
         print("ERROR: That is an empty array! Please try again.")
-        
