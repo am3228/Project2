@@ -27,3 +27,8 @@ class Statistics(Calculator):
     def mode(self, data):
         self.result = mode(data)
         return self.result
+
+    def standard_deviation(self, data):
+        self.result = standard_deviation(data)
+        return self.result
+    
