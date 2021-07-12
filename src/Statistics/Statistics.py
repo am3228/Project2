@@ -39,3 +39,7 @@ class Statistics(Calculator):
     def zscore(self, data):
         self.result = zscore(data)
         return self.result
+
+    def sample_mean(self, data):
+        self.result = samplemean(data)
+        return self.result
