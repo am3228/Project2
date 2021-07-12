@@ -35,3 +35,7 @@ class Statistics(Calculator):
     def variance(self, data):
         self.result = variance(data)
         return self.result
+
+    def zscore(self, data):
+        self.result = zscore(data)
+        return self.result
