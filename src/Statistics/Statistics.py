@@ -5,3 +5,8 @@ class Statistics(Calculator):
 
     def __init__(self):
         super().__init__()
+
+    def mean(self):
+        a = len(self)
+        b = float(sum(self))
+        return b / a
