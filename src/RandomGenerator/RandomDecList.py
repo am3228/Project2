@@ -9,4 +9,4 @@ def random_dec_list(start, end, length, seed):
     finally:
         random.set_state(state)
 
-https://www.geeksforgeeks.org/finally-keyword-in-python/
+#https://www.geeksforgeeks.org/finally-keyword-in-python/
