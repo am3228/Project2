@@ -15,10 +15,9 @@ class Statistics(Calculator):
         self.data = CsvReader(filepath)
         super().__init__()
 
-    def mean(self):
-        a = len(self)
-        b = float(sum(self))
-        return b / a
+    def mean(self, data):
+        self.result = mean(data)
+        return self.result
 
     def median(self, data):
         self.result = median(data)
@@ -41,5 +40,6 @@ class Statistics(Calculator):
         return self.result
 
     def sample_mean(self, data):
-        self.result = samplemean(data)
+        self.result = sample(data)
         return self.result
+    pass
