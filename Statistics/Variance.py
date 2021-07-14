@@ -2,7 +2,7 @@ from Statistics.Mean import mean
 from Calculator.Square import square
 from Calculator.Division import division
 
-def variance(data):
+def Variance(data):
     try:
         meanData = mean(data)
         totalVals = len(data)

@@ -4,7 +4,6 @@ from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Standard_deviation import standard_deviation
 from Statistics.Variance import variance
-from Statistics.ZScore import zscore
 from CsvReader.CsvReader import CsvReader
 
 class Statistics(Calculator):
@@ -32,10 +31,6 @@ class Statistics(Calculator):
 
     def variance(self, data):
         self.result = variance(data)
-        return self.result
-
-    def zscore(self, data):
-        self.result = zscore(data)
         return self.result
 
     pass

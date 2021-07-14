@@ -10,3 +10,5 @@ def mean(num):
         print("Error: Cannot divide by 0")
     except ValueError:
         print("Error: Check your data inputs")
+
+#https://www.geeksforgeeks.org/numpy-mean-in-python/
