@@ -21,7 +21,7 @@ class Statistics(Calculator):
         self.result = Median(data)
         return self.result
 
-    def mode(self, data):
+    def Mode(self, data):
         self.result = Mode(data)
         return self.result
 

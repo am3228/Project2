@@ -1,42 +1,45 @@
 import unittest
+import numpy as np
 from Statistics.Statistics import Statistics
 from CsvReader.CsvReader import CsvReader
-from RandomGenerator.RandomIntegerList import random_integer_list
-from numpy import var, std
 
 class MyTestCase(unittest.TestCase):
-    def setUp(self) -> None:
-        self.statsCalc = Statistics()
-        self.allData = CsvReader('./pythonProject1/Tests/Unit_Test_Stats.csv').data
-        self.testData = [int(row['Value']) for row in self.allData]
-        self.testAnswers = CsvReader('./pythonProject1/Tests/Unit_Answers.csv').data
-        self.list = random_integer_list(1, 10, 20, 50)
 
-    def test_instantiate_statistics(self):
-        self.assertIsInstance(self.statsCalc, Statistics)
+    def setUp(self) -> None:
+        self.statistics = Statistics()
+
+    def test_calculator(self):
+        self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean(self):
-        for row in self.testAnswers:
-            self.assertEqual(self.statsCalc.mean(self.testData), float(row['Mean']))
-            self.assertEqual(self.statsCalc.result, float(row['Mean']))
+        test_data = CsvReader("Tests/Data/Unit Test Mean.csv").data
+        value_data = [int(row['Value 1']) for row in test_data]
+        self.assertEqual(self.statistics.statistics_mean(value_data), 22.67)
+        self.assertEqual(self.statistics.result, 22.67)
 
     def test_median(self):
-        for row in self.testAnswers:
-            self.assertEqual(self.statsCalc.median(self.testData), float(row['Median']))
-            self.assertEqual(self.statsCalc.result, float(row['Median']))
+        test_data = CsvReader("Tests/Data/Unit Test Median.csv").data
+        value_data = [int(row['Value 1']) for row in test_data]
+        self.assertEqual(self.statistics.statistics_median(value_data), 22)
+        self.assertEqual(self.statistics.result, 22)
 
     def test_mode(self):
-        for row in self.testAnswers:
-            self.assertEqual(self.statsCalc.mode(self.testData), float(row['Mode']))
-            self.assertEqual(self.statsCalc.result, float(row['Mode']))
+        test_data = CsvReader("Tests/Data/Unit Test Mode.csv").data
+        value_data = [int(row["Value 1"]) for row in test_data]
+        self.assertEqual(self.statistics.statistics_mode(value_data), [32])
+        self.assertEqual(self.statistics.result, [32])
 
-    def test_variance_method(self):
-        var_test_val = (var(self.testData))
-        self.assertEqual(self.statsCalc.variance(self.testData), var_test_val)
-        self.assertEqual(self.statsCalc.result, var_test_val)
+    def test_variance(self):
+        test_data = CsvReader("Tests/Data/Unit Test Variance.csv").data
+        value_data = [int(row['Value 1']) for row in test_data]
+        self.assertEqual(self.statistics.statistics_variance(value_data), np.var(value_data))
+        self.assertEqual(self.statistics.result, np.var(value_data))
 
     def test_standard_deviation(self):
-        std_test_val = (std(self.testData))
-        round_test = round(float(std_test_val), 8)
-        self.assertAlmostEqual(self.statsCalc.standard_deviation(self.testData), round_test)
-        self.assertAlmostEqual(self.statsCalc.result, round_test)
+        test_data = CsvReader("Tests/Data/Unit Test Standard Deviation.csv").data
+        value_data = [int(row['Value 1']) for row in test_data]
+        self.assertEqual(self.statistics.statistics_standard_deviation(value_data), np.std(value_data), 3)
+        self.assertEqual(self.statistics.result, np.std(value_data))
+
+if __name__ == '__main__':
+    unittest.main()
