@@ -15,3 +15,6 @@ script:
 branches:
   only:
     -master
+
+env:
+  - PYTHONPATH="${PYTHONPATH}:Package1:Package2:Package
