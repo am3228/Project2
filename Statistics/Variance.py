@@ -1,10 +1,10 @@
-from Statistics.Mean import mean
+from Statistics.Mean import Mean
 from Calculator.Square import square
 from Calculator.Division import division
 
 def Variance(data):
     try:
-        meanData = mean(data)
+        meanData = Mean(data)
         totalVals = len(data)
         var = 0
         for a in data:

@@ -1,6 +1,6 @@
 from collections import Counter
 
-def mode(data):
+def Mode(data):
     try:
         totalVals = len(data)
         count = Counter(data)

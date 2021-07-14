@@ -1,6 +1,6 @@
 from numpy import random
 
-def random_integer_list(start, end, length, seed):
+def Random_integer_list(start, end, length, seed):
     state = random.get_state()
     random.seed(seed)
     try:

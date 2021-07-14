@@ -1,6 +1,6 @@
 from numpy import random
 
-def random_dec_list(start, end, length, seed):
+def Random_dec_list(start, end, length, seed):
     state = random.get_state()
     random.seed(seed)
     try:

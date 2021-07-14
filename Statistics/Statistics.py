@@ -1,9 +1,9 @@
 from Calculator.Calculator import Calculator
-from Statistics.Mean import mean
-from Statistics.Median import median
-from Statistics.Mode import mode
-from Statistics.Standard_deviation import standard_deviation
-from Statistics.Variance import variance
+from Statistics.Mean import Mean
+from Statistics.Median import Median
+from Statistics.Mode import Mode
+from Statistics.Standard_deviation import Standard_deviation
+from Statistics.Variance import Variance
 from CsvReader.CsvReader import CsvReader
 
 class Statistics(Calculator):
@@ -14,23 +14,23 @@ class Statistics(Calculator):
         super().__init__()
 
     def mean(self, data):
-        self.result = mean(data)
+        self.result = Mean(data)
         return self.result
 
     def median(self, data):
-        self.result = median(data)
+        self.result = Median(data)
         return self.result
 
     def mode(self, data):
-        self.result = mode(data)
+        self.result = Mode(data)
         return self.result
 
     def standard_deviation(self, data):
-        self.result = standard_deviation(data)
+        self.result = Standard_deviation(data)
         return self.result
 
     def variance(self, data):
-        self.result = variance(data)
+        self.result = Variance(data)
         return self.result
 
     pass

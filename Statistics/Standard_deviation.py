@@ -1,9 +1,9 @@
-from Statistics.Variance import variance
+from Statistics.Variance import Variance
 from Calculator.Squareroot import squareroot
 
 def Standard_deviation(data):
     try:
-        variance_data = variance(data)
+        variance_data = Variance(data)
         return squareroot(variance_data)
 
     except ValueError:

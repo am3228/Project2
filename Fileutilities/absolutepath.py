@@ -1,5 +1,5 @@
 from pathlib import Path
 
-def Absolutepath(filepath):
+def absolutepath(filepath):
     relative = Path(filepath)
     return relative.absolute()

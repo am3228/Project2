@@ -2,7 +2,7 @@ from Calculator.Division import division
 from Calculator.Subtraction import subtraction
 from Calculator.Addition import addition
 
-def median(data):
+def Median(data):
     try:
         totalVals = len(data)
         list_numbers = [data[i] for i in range(totalVals)]

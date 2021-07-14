@@ -1,6 +1,6 @@
 from Calculator.Division import division
 
-def mean(num):
+def Mean(num):
     try:
         num_values = len(num)
         total = sum(num)
