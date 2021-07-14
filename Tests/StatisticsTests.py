@@ -7,9 +7,9 @@ from numpy import var, std
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.statsCalc = Statistics()
-        self.allData = CsvReader('./src/Tests/Unit_Test_Stats.csv').data
+        self.allData = CsvReader('./pythonProject1/Tests/Unit_Test_Stats.csv').data
         self.testData = [int(row['Value']) for row in self.allData]
-        self.testAnswers = CsvReader('./src/Tests/Unit_Answers.csv').data
+        self.testAnswers = CsvReader('./pythonProject1/Tests/Unit_Answers.csv').data
         self.list = random_integer_list(1, 10, 20, 50)
 
     def test_instantiate_statistics(self):
