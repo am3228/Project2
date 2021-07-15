@@ -1,6 +1,7 @@
 [![Build Status](https://www.travis-ci.com/am3228/Project2.svg?branch=master)](https://www.travis-ci.com/am3228/Project2)
 
 # Project 2 Statistical Calculator
+##### Completed by Angela Murphy by herself. Sources are listed throughout the code when used.
 
 #### This project consists of a Statistical Calculator using pycharm for IS 601 at NJIT. Listed below are the following requirements that were implemented.
 
