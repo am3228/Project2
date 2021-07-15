@@ -16,19 +16,19 @@ class MyTestCase(unittest.TestCase):
 
     def test_mean(self):
         test_data = Csv_Reader('Tests/Data/Unit Test Mean.csv').data
-        value_data = [int(row['Value 1']) for row in test_data]
+        value_data = [int(row['Result']) for row in test_data]
         self.assertEqual(self.statistics.get_mean(value_data), 22.67)
         self.assertEqual(self.statistics.result, 22.67)
 
     def test_median(self):
         test_data = Csv_Reader('Tests/Data/Unit Test Median.csv').data
-        value_data = [int(row['Value 1']) for row in test_data]
+        value_data = [int(row['Result']) for row in test_data]
         self.assertEqual(self.statistics.get_median(value_data), 22)
         self.assertEqual(self.statistics.result, 22)
 
     def test_mode(self):
         test_data = Csv_Reader('Tests/Data/Unit Test Mode.csv').data
-        value_data = [int(row['Value 1']) for row in test_data]
+        value_data = [int(row['Result']) for row in test_data]
         self.assertEqual(self.statistics.get_mode(value_data), [32])
         self.assertEqual(self.statistics.result, [32])
 
