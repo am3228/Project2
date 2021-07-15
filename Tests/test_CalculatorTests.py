@@ -40,7 +40,7 @@ class MyTestCase(unittest.TestCase):
     def test_square_root_method_calculator(self):
         test_data = Csv_Reader('/Tests/Data/Unit Test Square Root.csv').data
         for row in test_data:
-            self.assertEqual(round(self.calculator.squareroot(int(row['Value 1'])), 8), round(float(row['Result']), 8))
+            self.assertEqual(round(self.calculator.Squareroot(int(row['Value 1'])), 8), round(float(row['Result']), 8))
             self.assertEqual(round(self.calculator.result, 8), round(float(row['Result']), 8))
 
     def test_square_method_calculator(self):
