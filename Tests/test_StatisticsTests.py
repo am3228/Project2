@@ -11,6 +11,9 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_statistics(self):
         self.assertIsInstance(self.statistics, Statistics)
 
+    def test_results_property_statistics(self):
+        self.assertEqual(self.statistics.result, 0)
+
     def test_mean(self):
         test_data = Csv_Reader('Tests/Data/Unit Test Mean.csv').data
         value_data = [int(row['Value 1']) for row in test_data]
