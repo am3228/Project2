@@ -1,6 +1,6 @@
-from src.Calculator.Addition import addition
-from src.Calculator.Division import division
-from src.Statistics.Statistics import Getsample
+from Calculator.Addition import Addition
+from Calculator.Division import Division
+from Statistics.Statistics import Getsample
 
 
 def Sample_Mean(data, sample_size):
@@ -8,5 +8,5 @@ def Sample_Mean(data, sample_size):
     sample = Getsample(data, sample_size)
     num_values = len(sample)
     for num in sample:
-        total = addition(total, num)
-    return division(total, num_values)
+        total = Addition(total, num)
+    return Division(total, num_values)

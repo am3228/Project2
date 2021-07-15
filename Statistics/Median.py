@@ -1,6 +1,6 @@
-from src.Calculator.Division import division
-from src.Calculator.Subtraction import subtraction
-from src.Calculator.Addition import addition
+from Calculator.Division import Division
+from Calculator.Subtraction import Subtraction
+from Calculator.Addition import Addition
 
 def Median(data):
     try:
@@ -9,10 +9,10 @@ def Median(data):
         list_numbers.sort()
         if totalVals % 2 == 0:
             median1 = list_numbers[int(totalVals // 2)]
-            median2 = list_numbers[int(subtraction((totalVals // 2), 1))]
-            result = division(addition(median1, median2), 2)
+            median2 = list_numbers[int(Subtraction((totalVals // 2), 1))]
+            result = Division(Addition(median1, median2), 2)
         else:
-            result = list_numbers[int(division(totalVals, 2))]
+            result = list_numbers[int(Division(totalVals, 2))]
         return result
     except ValueError:
         print("ERROR: That is an empty array! Please try again.")

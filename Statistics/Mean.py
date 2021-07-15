@@ -1,10 +1,10 @@
-from src.Calculator.Division import division
+from Calculator.Division import Division
 
 def Mean(num):
     try:
         num_values = len(num)
         total = sum(num)
-        return division(total, num_values)
+        return Division(total, num_values)
 
     except ZeroDivisionError:
         print("Error: Cannot divide by 0")

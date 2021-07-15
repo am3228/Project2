@@ -1,9 +1,9 @@
-from Calculator.Subtraction import subtraction
-from Calculator.Addition import addition
-from Calculator.Multiply import multiply
-from Calculator.Division import division
-from Calculator.Square import square
-from Calculator.Squareroot import squareroot
+from Calculator.Subtraction import Subtraction
+from Calculator.Addition import Addition
+from Calculator.Multiply import Multiply
+from Calculator.Division import Division
+from Calculator.Square import Square
+from Calculator.Squareroot import Squareroot
 
 class Calculator:
     result = 0
@@ -12,25 +12,25 @@ class Calculator:
         pass
 
     def add(self, a, b):
-        self.result = addition(a, b)
+        self.result = Addition(a, b)
         return self.result
 
     def subtract(self, a, b):
-        self.result = subtraction(a, b)
+        self.result = Subtraction(a, b)
         return self.result
 
     def divide(self, a, b):
-        self.result = division(a, b)
+        self.result = Division(a, b)
         return self.result
 
     def multiply(self, a, b):
-        self.result = multiply(a, b)
+        self.result = Multiply(a, b)
         return self.result
 
     def Squareroot(self, a):
-        self.result = squareroot(a)
+        self.result = Squareroot(a)
         return self.result
 
     def square(self, a):
-        self.result = square(a)
+        self.result = Square(a)
         return self.result

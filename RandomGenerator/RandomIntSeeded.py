@@ -1,5 +1,5 @@
 from numpy import random
-from src.RandomGenerator.RandomInt import Random_Int
+from RandomGenerator.RandomInt import Random_Int
 
 def Random_Int_Seeded(start, end, seed):
     state = random.get_state()

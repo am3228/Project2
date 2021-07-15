@@ -1,6 +1,6 @@
-from src.Statistics.Statistics import Mean
-from src.Calculator.Square import square
-from src.Calculator.Division import division
+from Statistics.Statistics import Mean
+from Calculator.Square import Square
+from Calculator.Division import Division
 
 def Variance(data):
     try:
@@ -8,8 +8,8 @@ def Variance(data):
         totalVals = len(data)
         var = 0
         for a in data:
-            var = var + square(a = meanData)
-        result = division(var, totalVals)
+            var = var + Square(a = meanData)
+        result = Division(var, totalVals)
 
         return result
     except ValueError:
