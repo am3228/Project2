@@ -1,7 +1,7 @@
-FROM python:3.7
+FROM python:3.7.11
 
 ADD . .
 
-RUN pip install -r requirements.txt
+RUN pip install numpy
 
-CMD [ "python", "-m", "unittest", "discover", "-s", "Tests"]
+CMD ["python3", "-m", "unittest", "discover", "-s", "Tests"]

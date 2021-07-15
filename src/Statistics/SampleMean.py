@@ -1,6 +1,6 @@
-from Calculator.Addition import addition
-from Calculator.Division import division
-from Statistics.Getsample import Getsample
+from src.Calculator.Addition import addition
+from src.Calculator.Division import division
+from src.Statistics.Statistics import Getsample
 
 
 def Sample_Mean(data, sample_size):

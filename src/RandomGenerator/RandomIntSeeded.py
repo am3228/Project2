@@ -1,7 +1,7 @@
 from numpy import random
-from RandomGenerator.RandomInt import Random_Int
+from src.RandomGenerator.RandomInt import Random_Int
 
-def Random_int_seeded(start, end, seed):
+def Random_Int_Seeded(start, end, seed):
     state = random.get_state()
     random.seed(seed)
     try:

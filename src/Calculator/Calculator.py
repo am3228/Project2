@@ -27,7 +27,7 @@ class Calculator:
         self.result = multiply(a, b)
         return self.result
 
-    def squareroot(self, a):
+    def Squareroot(self, a):
         self.result = squareroot(a)
         return self.result
 

@@ -1,6 +1,6 @@
-from Statistics.Mean import Mean
-from Calculator.Square import square
-from Calculator.Division import division
+from src.Statistics.Statistics import Mean
+from src.Calculator.Square import square
+from src.Calculator.Division import division
 
 def Variance(data):
     try:

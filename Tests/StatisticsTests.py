@@ -1,14 +1,13 @@
 import unittest
-import numpy as np
 from Statistics.Statistics import Statistics
-from CsvReader.CsvReader import CsvReader
+from RandomGenerator.RandomGenerator import RandomGenerator
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.statistics = Statistics()
 
-    def test_calculator(self):
+    def test_instantiate_statistics(self):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean(self):

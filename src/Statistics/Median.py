@@ -1,6 +1,6 @@
-from Calculator.Division import division
-from Calculator.Subtraction import subtraction
-from Calculator.Addition import addition
+from src.Calculator.Division import division
+from src.Calculator.Subtraction import subtraction
+from src.Calculator.Addition import addition
 
 def Median(data):
     try:
@@ -16,5 +16,3 @@ def Median(data):
         return result
     except ValueError:
         print("ERROR: That is an empty array! Please try again.")
-
-#

@@ -1,3 +1,3 @@
-def square(a):
+def Square(a):
     c = a*a
     return c

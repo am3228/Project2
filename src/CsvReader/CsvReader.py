@@ -1,16 +1,17 @@
 import csv
-from Fileutilities.Absolutepath import absolutepath
+from pathlib import Path
 
 def ClassFactory(class_name, dictionary):
     return type(class_name, (object,), dictionary)
 
-class CsvReader:
+class Csv_Reader:
     data = []
 
     def __init__(self, filepath):
         self.data = []
-
-        with open(absolutepath(filepath)) as text_data:
+        relative = Path(filepath)
+        absolutepath = relative.absolute()
+        with open(absolutepath) as text_data:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
                 self.data.append(row)

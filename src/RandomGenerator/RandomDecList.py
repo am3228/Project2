@@ -1,11 +1,11 @@
 from numpy import random
 
-def Random_integer_list(start, end, length, seed):
+def Random_Dec_List(start, end, length, seed):
     state = random.get_state()
     random.seed(seed)
     try:
-        integer_list = random.randint(start, end, length)
-        return integer_list
+        dec_list = random.uniform(start, end, length)
+        return dec_list
     finally:
         random.set_state(state)
 
